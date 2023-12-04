@@ -43,6 +43,8 @@ class OscillatorEnvelope: public Envelope
   void pointUpdatedEvent(unsigned int index, double x, double y) override;
   void pointRemovedEvent(unsigned int index) override;
   double envelopeAmplitude() const override;
+  void setApplyType(Envelope::ApplyType apply) override;
+  Envelope::ApplyType getApplyType() const override;
 
  private:
           Oscillator *oscillator;

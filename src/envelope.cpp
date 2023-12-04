@@ -567,7 +567,7 @@ void Envelope::updatePoints()
 
 RkRealPoint Envelope::scaleDown(const RkPoint &point)
 {
-	if (applyType == ApplyType::Logarithmic) {
+	if (getApplyType() == ApplyType::Logarithmic) {
 		return {static_cast<double>(point.x()) / W(),
 			static_cast<double>(point.y()) / H()};
 	}

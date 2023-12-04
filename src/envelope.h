@@ -97,8 +97,8 @@ class Envelope : public RkObject
                      RK_ARG_TYPE(),
                      RK_ARG_VAL());
         std::string getCurrentPointInfo() const;
-	void setApplyType(ApplyType apply);
-	ApplyType getApplyType() const;
+	virtual void setApplyType(ApplyType apply);
+	virtual ApplyType getApplyType() const;
 
  protected:
         virtual void pointAddedEvent(double x, double y) = 0;

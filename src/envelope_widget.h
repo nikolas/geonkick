@@ -61,6 +61,7 @@ public:
      void setLayer(GeonkickApi::Layer layer);
      void createButtomMenu();
      void createPointInfoLabel();
+     void updateApplyEnvelopeButton();
 
  private:
      std::unordered_map<int, std::shared_ptr<Envelope>> envelopes;
@@ -68,6 +69,7 @@ public:
      GeonkickButton *layer1Button;
      GeonkickButton *layer2Button;
      GeonkickButton *layer3Button;
+     GeonkickButton *envelopeApplyButton;
      GeonkickApi *geonkickApi;
      RkContainer *menuContainer;
 };

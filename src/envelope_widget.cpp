@@ -38,6 +38,10 @@ RK_DECLARE_IMAGE_RC(layer2_env);
 RK_DECLARE_IMAGE_RC(layer2_env_active);
 RK_DECLARE_IMAGE_RC(layer3_env);
 RK_DECLARE_IMAGE_RC(layer3_env_active);
+RK_DECLARE_IMAGE_RC(env_apply_type_log);
+RK_DECLARE_IMAGE_RC(env_apply_type_lin);
+RK_DECLARE_IMAGE_RC(env_apply_type_log_hover);
+RK_DECLARE_IMAGE_RC(env_apply_type_lin_hover);
 
 EnvelopeWidget::EnvelopeWidget(GeonkickWidget *parent,
                                GeonkickApi *api,
@@ -47,6 +51,7 @@ EnvelopeWidget::EnvelopeWidget(GeonkickWidget *parent,
           , layer1Button{nullptr}
           , layer2Button{nullptr}
           , layer3Button{nullptr}
+	  , envelopeApplyButton{nullptr}
           , geonkickApi{api}
 {
         // Create drawing area.
@@ -74,6 +79,7 @@ EnvelopeWidget::EnvelopeWidget(GeonkickWidget *parent,
         // General envelope
         envelope = std::dynamic_pointer_cast<Envelope>(std::make_shared<GeneralEnvelope>(geonkickApi, rect));
         envelopes.insert({static_cast<int>(Envelope::Category::General), envelope});
+	drawArea->setEnvelope(envelope.get());
         envelope->setCategory(Envelope::Category::General);
         createButtomMenu();
         showEnvelope(Envelope::Category::General, Envelope::Type::Amplitude);
@@ -88,8 +94,8 @@ EnvelopeWidget::EnvelopeWidget(GeonkickWidget *parent,
 void EnvelopeWidget::createButtomMenu()
 {
         auto buttomAreaWidget = new GeonkickWidget(drawArea);
-        buttomAreaWidget->setBackgroundColor(40, 40, 40);
-        buttomAreaWidget->setFixedSize(90, 20);
+	buttomAreaWidget->setBackgroundColor(40, 40, 40);
+        buttomAreaWidget->setFixedSize(115, 20);
         buttomAreaWidget->setPosition(55 + drawArea->x(),
                                       drawArea->y() + drawArea->height() - buttomAreaWidget->height() - 6);
 
@@ -97,20 +103,21 @@ void EnvelopeWidget::createButtomMenu()
 	envelopeApplyButton = new GeonkickButton(buttomAreaWidget);
         envelopeApplyButton->setBackgroundColor(buttomAreaWidget->background());
         envelopeApplyButton->setSize(24, 18);
-        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_log)),
+        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_type_log)),
                                RkButton::State::Unpressed);
-        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_lin)),
+        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_type_lin)),
                                RkButton::State::Pressed);
-        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_log_hover)),
+        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_type_log_hover)),
                                RkButton::State::UnpressedHover);
-	envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_lin_hover)),
+	envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_type_lin_hover)),
                                RkButton::State::PressedHover);
         envelopeApplyButton->setCheckable(true);
-        envelopeApplyButton->setPressed(true);
+        envelopeApplyButton->setPressed(drawArea->getEnvelope()->getApplyType() == ApplyType::Linear);
         RK_ACT_BIND(envelopeApplyButton,
 		    toggled,
 		    RK_ACT_ARGS(bool b),
-                    this, setEnvelopeApplyType(b ? ApplyType::Linear : ApplyType::Linear));
+                    this, setEnvelopeApplyType(b ? ApplyType::Linear : ApplyType::Logarithmic));
+	envelopeApplyButton->show();
 	
         createLayersButtons(buttomAreaWidget);
 	menuContainer = new RkContainer(buttomAreaWidget);
@@ -119,6 +126,8 @@ void EnvelopeWidget::createButtomMenu()
         menuContainer->addWidget(layer2Button);
         menuContainer->addSpace(5);
         menuContainer->addWidget(layer3Button);
+	menuContainer->addSpace(5);
+	menuContainer->addWidget(envelopeApplyButton);
         buttomAreaWidget->show();
 }
 
@@ -154,6 +163,7 @@ void EnvelopeWidget::showEnvelope(Envelope::Category category, Envelope::Type ty
         if (auto envelope = getEnvelope(category); envelope) {
                 envelope->setType(type);
                 drawArea->setEnvelope(envelope);
+		updateApplyEnvelopeButton();
         }
 }
 
@@ -224,6 +234,19 @@ void EnvelopeWidget::updateGui()
         for (const auto &envelope: envelopes)
                 envelope.second->updateEnvelope();
         drawArea->update();
+	updateApplyEnvelopeButton();
+}
+
+void EnvelopeWidget::updateApplyEnvelopeButton()
+{
+	if (drawArea->getEnvelope()->type() == Envelope::Type::Frequency
+	    || drawArea->getEnvelope()->type() == Envelope::Type::FilterCutOff) {
+		auto applyType = drawArea->getEnvelope()->getApplyType();
+		envelopeApplyButton->setPressed(applyType == ApplyType::Linear);
+		envelopeApplyButton->show();
+	} else {
+		envelopeApplyButton->hide();
+	}
 }
 
 Oscillator* EnvelopeWidget::getCurrentOscillator() const

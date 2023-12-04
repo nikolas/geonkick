@@ -88,3 +88,13 @@ Oscillator* OscillatorEnvelope::getOscillator() const
 {
         return oscillator;
 }
+
+void OscillatorEnvelope::setApplyType(Envelope::ApplyType apply)
+{
+	oscillator->setEnvelopeApplyType(static_cast<Oscillator::EnvelopeType>(type()), apply);
+}
+
+Envelope::ApplyType OscillatorEnvelope::getApplyType() const
+{
+	return oscillator->envelopeApplyType(static_cast<Oscillator::EnvelopeType>(type()));
+}
