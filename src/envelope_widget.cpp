@@ -238,14 +238,14 @@ void EnvelopeWidget::updateGui()
 
 void EnvelopeWidget::updateApplyEnvelopeButton()
 {
-	if (drawArea->getEnvelope()->type() == Envelope::Type::Frequency
-	    || drawArea->getEnvelope()->type() == Envelope::Type::FilterCutOff) {
-		auto applyType = drawArea->getEnvelope()->getApplyType();
-		envelopeApplyButton->setPressed(applyType == ApplyType::Linear);
-		envelopeApplyButton->show();
-	} else {
-		envelopeApplyButton->hide();
-	}
+	//	if (drawArea->getEnvelope()->type() == Envelope::Type::Frequency
+	//	    || drawArea->getEnvelope()->type() == Envelope::Type::FilterCutOff) {
+	//		auto applyType = drawArea->getEnvelope()->getApplyType();
+	//		envelopeApplyButton->setPressed(applyType == ApplyType::Linear);
+	//		envelopeApplyButton->show();
+	//	} else {
+	envelopeApplyButton->hide();
+		//	}
 }
 
 Oscillator* EnvelopeWidget::getCurrentOscillator() const

@@ -276,7 +276,7 @@ void Envelope::drawPointValue(RkPainter &painter, const RkPoint &point, double v
                 value = 2 * value - envelopeAmplitude();
                 painter.drawText(point.x(), point.y(), Geonkick::doubleToStr(value, 1));
         } else if (type() == Envelope::Type::Frequency || type() == Type::FilterCutOff) {
-		auto frequency =  pow(10, (log10(envelopeAmplitude()) - log10(20)) * value + log10(20));
+		auto frequency = pow(10, (log10(envelopeAmplitude()) - log10(20)) * value + log10(20));
 		if (frequency >= 20 && frequency < 1000) {
 			double roundedValue = std::round(frequency * 10.0) / 10.0;
 			painter.drawText(point.x(), point.y(),
@@ -551,13 +551,13 @@ void Envelope::updatePoints()
 
 RkRealPoint Envelope::scaleDown(const RkPoint &point)
 {
-	return {static_cast<double>(point.x()) / W(),
-		static_cast<double>(point.y()) / H()};
+	return RkRealPoint(static_cast<double>(point.x()) / W(),
+			   static_cast<double>(point.y()) / H());
 }
 
 RkPoint Envelope::scaleUp(const RkRealPoint &point)
 {
-	return RkPoint(point.x() * W(), point.y() * H());
+        return RkPoint(point.x() * W(), point.y() * H());
 }
 
 bool Envelope::hasPoint(const RkRealPoint &point, const RkPoint &p)
@@ -649,7 +649,9 @@ double Envelope::convertFromHumanValue(double val) const
         } else if (type() == Type::PitchShift) {
                 val = (val / envelopeAmplitude() + 1.0) / 2.0;
         } else if (type() == Envelope::Type::Frequency || type() == Type::FilterCutOff) {
-		if (val >= 20 && envelopeAmplitude() >= 20) {
+		if (envelopeAmplitude() >= 20) {
+			if (val < 20)
+				val = 20;
 			val = log10(val / 20) / log10(envelopeAmplitude() / 20);
 			return std::clamp(val, 0.0, 1.0);
 		}

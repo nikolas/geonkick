@@ -62,16 +62,16 @@ gkick_envelope_get_value(const struct gkick_envelope* envelope, gkick_real xm)
 
 	if (xm < envelope->first->x || xm > envelope->last->x) {
 		return 0.0f;
-	} else if (fabsl(xm - envelope->first->x) < DBL_EPSILON) {
+	} else if (xm == envelope->first->x) {
                 return envelope->first->y;
-        } else if (fabsl(envelope->last->x - xm) < DBL_EPSILON) {
+        } else if (envelope->last->x == xm) {
                 return envelope->last->y;
         }
 
         x2 = x1 = xm;
 	p = envelope->first;
 	while (p) {
-                if (fabs(xm - p->x) < DBL_EPSILON) {
+                if (xm == p->x) {
                         return p->y;
                 } else if (xm < p->x) {
 			x2 = p->x;
@@ -83,7 +83,7 @@ gkick_envelope_get_value(const struct gkick_envelope* envelope, gkick_real xm)
 
 	p = envelope->last;
 	while (p) {
-                if (fabs(xm - p->x) < DBL_EPSILON) {
+                if (xm == p->x) {
                         return p->y;
                 } else if (p->x < xm) {
 			x1 = p->x;
@@ -93,7 +93,7 @@ gkick_envelope_get_value(const struct gkick_envelope* envelope, gkick_real xm)
 		p = p->prev;
 	}
 
-	if (fabsl(x2 - x1) < DBL_EPSILON)
+	if (x2 == x1)
 	        ym = y1;
 	else
 	        ym = (y1 * (x2 - xm) + y2 * (xm - x1)) / (x2 - x1);

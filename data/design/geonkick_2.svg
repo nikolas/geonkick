@@ -5,12 +5,35 @@
    viewBox="0 0 507.99998 285.74998"
    height="1080"
    width="1920"
+   sodipodi:docname="geonkick_2.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview646"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="3.5564852"
+     inkscape:cx="1247.1583"
+     inkscape:cy="747.78885"
+     inkscape:window-width="1920"
+     inkscape:window-height="908"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13507" />
   <defs
      id="defs13501">
     <radialGradient
@@ -38,7 +61,7 @@
        height="1.0419801"
        y="-0.020990064"
        width="1.0083938"
-       x="-0.0041969221"
+       x="-0.004196916"
        id="filter10330-7-9-8-8"
        style="color-interpolation-filters:sRGB">
       <feGaussianBlur
@@ -70,8 +93,8 @@
     <filter
        height="1.0419801"
        y="-0.020990064"
-       width="1.0061748"
-       x="-0.0030873755"
+       width="1.0061747"
+       x="-0.0030873654"
        id="filter10330-7-9-5-3"
        style="color-interpolation-filters:sRGB">
       <feGaussianBlur
@@ -82,7 +105,7 @@
        height="1.0427058"
        y="-0.021352925"
        width="1.0127137"
-       x="-0.0063568601"
+       x="-0.0063568456"
        id="filter10330-7-9-8"
        style="color-interpolation-filters:sRGB">
       <feGaussianBlur
@@ -137,7 +160,7 @@
        height="1.0419801"
        y="-0.020990064"
        width="1.0063606"
-       x="-0.0031803211"
+       x="-0.0031803103"
        id="filter10330-7-9-5"
        style="color-interpolation-filters:sRGB">
       <feGaussianBlur
@@ -170,7 +193,7 @@
        height="1.034495"
        y="-0.017247475"
        width="1.0064127"
-       x="-0.003206354"
+       x="-0.0032063504"
        id="filter10330-7-9-0"
        style="color-interpolation-filters:sRGB">
       <feGaussianBlur
@@ -203,7 +226,7 @@
        height="1.034495"
        y="-0.017247475"
        width="1.0063758"
-       x="-0.0031878953"
+       x="-0.0031878904"
        id="filter10330-7-9"
        style="color-interpolation-filters:sRGB">
       <feGaussianBlur
@@ -514,12 +537,66 @@
        y="417.70291"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.6398px;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L';fill:#8b8f74;fill-opacity:1;stroke-width:0.417654">General</tspan></text>
   <rect
-     style="display:inline;opacity:1;fill:#444446;fill-opacity:1;stroke:none;stroke-width:1.51203763;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="display:inline;opacity:1;fill:#444446;fill-opacity:1;stroke:none;stroke-width:1.51204;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect16536"
      width="251.35416"
      height="168.50925"
-     x="138.00882"
-     y="76.807999" />
+     x="166.94891"
+     y="70.409485" />
+  <g
+     id="g5780-2"
+     transform="translate(16.678415,12.011454)"
+     inkscape:export-filename="../../src/resources/env_apply_type_lin_hover.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <rect
+       ry="0.56514996"
+       rx="0.56514996"
+       y="180.05089"
+       x="286.79752"
+       height="4.6751871"
+       width="6.4350839"
+       id="rect9253-37-1-6"
+       style="display:inline;opacity:0.83;fill:#88aa00;fill-opacity:1;stroke:none;stroke-width:0.183211;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <text
+       transform="scale(0.95403061,1.0481844)"
+       id="text8698-1-8-3-5-5-1"
+       y="174.99263"
+       x="302.24884"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2.67509px;line-height:1.25;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.93;fill:#fffffd;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';fill:#fffffd;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="174.99263"
+         x="302.24884"
+         id="tspan8696-01-5-8-92-5-8">LN</tspan></text>
+  </g>
+  <g
+     id="g5780-9"
+     transform="translate(2.8717626,12.01373)"
+     inkscape:export-filename="../../src/resources/env_apply_type_log_hover.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <rect
+       ry="0.56514996"
+       rx="0.56514996"
+       y="180.05089"
+       x="286.79752"
+       height="4.6751871"
+       width="6.4350839"
+       id="rect9253-37-1-3"
+       style="display:inline;opacity:0.83;fill:#88aa00;fill-opacity:1;stroke:none;stroke-width:0.183211;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <text
+       transform="scale(0.95403061,1.0481844)"
+       id="text8698-1-8-3-5-5-60"
+       y="174.99263"
+       x="302.24884"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2.67509px;line-height:1.25;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.93;fill:#fffffd;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';fill:#fffffd;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="174.99263"
+         x="302.24884"
+         id="tspan8696-01-5-8-92-5-6">LG</tspan></text>
+  </g>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.5147px;line-height:1.25;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L';letter-spacing:0px;word-spacing:0px;display:inline;opacity:0.81;fill:#dfe0de;fill-opacity:1;stroke:none;stroke-width:0.109834"
@@ -1251,6 +1328,60 @@
          y="174.48912"
          x="300.11414"
          id="tspan8696-01-5-8-92-5-5">L1</tspan></text>
+  </g>
+  <g
+     id="g5866-3"
+     transform="translate(5.3988243,7.375945)"
+     inkscape:export-filename="../../src/resources/env_apply_type_log.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <rect
+       ry="0.56514996"
+       rx="0.56514996"
+       y="179.54634"
+       x="284.20081"
+       height="4.6751871"
+       width="6.4350839"
+       id="rect9253-37-1-7-6"
+       style="display:inline;opacity:0.83;fill:#739000;fill-opacity:1;stroke:none;stroke-width:0.183211;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <text
+       transform="scale(0.95403061,1.0481844)"
+       id="text8698-1-8-3-5-5-6-7"
+       y="174.5643"
+       x="299.53506"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2.67509px;line-height:1.25;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;opacity:1;fill:#3a3a36;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';fill:#3a3a36;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="174.5643"
+         x="299.53506"
+         id="tspan8696-01-5-8-92-5-5-5">LG</tspan></text>
+  </g>
+  <g
+     id="g5866-3-5"
+     transform="translate(19.153442,6.8766216)"
+     inkscape:export-filename="../../src/resources/env_apply_type_lin.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <rect
+       ry="0.56514996"
+       rx="0.56514996"
+       y="179.54634"
+       x="284.20081"
+       height="4.6751871"
+       width="6.4350839"
+       id="rect9253-37-1-7-6-6"
+       style="display:inline;opacity:0.83;fill:#739000;fill-opacity:1;stroke:none;stroke-width:0.183211;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <text
+       transform="scale(0.95403061,1.0481844)"
+       id="text8698-1-8-3-5-5-6-7-2"
+       y="174.5643"
+       x="299.53506"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:2.67509px;line-height:1.25;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';letter-spacing:0px;word-spacing:0px;display:inline;opacity:1;fill:#3a3a36;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'URW Gothic L';-inkscape-font-specification:'URW Gothic L Semi-Bold';fill:#3a3a36;fill-opacity:1;stroke:none;stroke-width:0.103971;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="174.5643"
+         x="299.53506"
+         id="tspan8696-01-5-8-92-5-5-5-9">LN</tspan></text>
   </g>
   <g
      id="g5861"
