@@ -95,6 +95,25 @@ void EnvelopeWidget::createButtomMenu()
                                       drawArea->y() + drawArea->height() - buttomAreaWidget->height() - 6);
         buttomAreaWidget->show();
 
+	// Create envelope apply type button.
+	envelopeApplyButton = new GeonkickButton(buttomAreaWidget);
+        envelopeApplyButton->setBackgroundColor(buttomAreaWidget->background());
+        envelopeApplyButton->setSize(24, 18);
+        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_log)),
+                               RkButton::State::Unpressed);
+        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_lin)),
+                               RkButton::State::Pressed);
+        envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_log_hover)),
+                               RkButton::State::UnpressedHover);
+	envelopeApplyButton->setImage(RkImage(envelopeApplyButton->size(), RK_IMAGE_RC(env_apply_button_lin_hover)),
+                               RkButton::State::PressedHover);
+        envelopeApplyButton->setCheckable(true);
+        envelopeApplyButton->setPressed(true);
+        RK_ACT_BIND(envelopeApplyButton,
+		    toggled,
+		    RK_ACT_ARGS(bool b),
+                    this, setEnvelopeApplyType(b ? ApplyType::Linear : ApplyType::Linear));
+	
         createLayersButtons(buttomAreaWidget);
 	menuContainer = new RkContainer(buttomAreaWidget);
 	menuContainer->addWidget(layer1Button);
@@ -194,6 +213,11 @@ void EnvelopeWidget::setLayer(GeonkickApi::Layer layer)
         layer3Button->setPressed(GeonkickApi::Layer::Layer3 == layer);
         geonkickApi->setLayer(layer);
         action requestUpdateGui();
+}
+
+void EnvelopeWidget::setEnvelopeApplyType(EnvelopeWidget::ApplyType applyType)
+{
+	drawArea->getEnvelope()->setApplyType(applyType);
 }
 
 void EnvelopeWidget::updateGui()

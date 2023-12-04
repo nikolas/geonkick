@@ -37,12 +37,14 @@ class EnvelopeWidget : public GeonkickWidget
 {
 public:
 
+     using ApplyType = Envelope::ApplyType;
      explicit EnvelopeWidget(GeonkickWidget *parent,
                              GeonkickApi *api,
                              const std::vector<std::unique_ptr<Oscillator>> &oscillators);
      void hideEnvelope(bool b);
      void showEnvelope(Envelope::Category category = Envelope::Category::General,
                        Envelope::Type type = Envelope::Type::Amplitude);
+     void setEnvelopeApplyType(ApplyType applyType);
      void updateGui();
      RK_DECL_ACT(requestUpdateGui, requestUpdateGui(), RK_ARG_TYPE(), RK_ARG_VAL());
      RK_DECL_ACT(envelopeTypeSelected,
